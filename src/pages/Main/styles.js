@@ -28,10 +28,13 @@ export const Card = styled(Animated.View)`
 `;
 
 export const CardHeader = styled.View`
-flex-direction: row;
-justify-content: space-between;
-align-items: center;
-padding: 30px;
+    flex-direction: row;
+    align-items: center;
+    padding: 30px;
+`;
+
+export const CardIconRight = styled.View`
+    margin-left: auto
 `;
 
 export const CardContent = styled.View`
@@ -40,15 +43,23 @@ export const CardContent = styled.View`
     justify-content: center
 `;
 
+export const CardName = styled.Text`
+    padding: 0 5px;
+    color: #999;
+    font-family: Roboto-Regular;
+`;
+
 export const Title = styled.Text`
     font-size: 13px;
     color: #999;
+    font-family: Roboto-Light;
 `;
 
 export const Description = styled.Text`
     font-size: 32px;
     margin-top: 3px;
     color: #333;
+    font-family: Roboto-Light;
 `;
 
 export const CardFooter = styled.View`
@@ -60,11 +71,7 @@ export const CardFooter = styled.View`
 export const Annotation = styled.Text`
     font-size: 12px;
     color: #333;
+    font-family: Roboto-Light;
 `;
-
-
-
-
-
 
 

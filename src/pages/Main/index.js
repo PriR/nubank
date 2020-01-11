@@ -5,7 +5,7 @@ import Icon from 'react-native-vector-icons/MaterialIcons';
 import { Animated } from 'react-native';
 import { PanGestureHandler, State } from 'react-native-gesture-handler';
 
-import { Container, Content, Card, CardHeader, CardContent, CardFooter,
+import { Container, Content, Card, CardHeader, CardIconRight, CardName, CardContent, CardFooter,
 Title, Description, Annotation } from './styles';
 import Header from '~/components/Header';
 import Tabs from '~/components/Tabs';
@@ -45,11 +45,11 @@ export default function Main() {
             }
 
             Animated.timing(translateY, {
-                toValue: opened ? 380 : 0,
+                toValue: opened ? 600 : 0,
                 duration: 200,
                 useNativeDriver: true
             }).start(() => {
-                offset = opened ? 380 : 0;
+                offset = opened ? 600 : 0;
                 translateY.setOffset(offset);
                 translateY.setValue(0);
             });
@@ -70,15 +70,18 @@ export default function Main() {
                     <Card style={{
                         transform: [{
                             translateY: translateY.interpolate({
-                                inputRange: [0, 380],
-                                outputRange: [0, 380],
+                                inputRange: [0, 480],
+                                outputRange: [0, 480],
                                 extrapolate: 'clamp'
                             })
                         }]
                     }}>
                         <CardHeader>
                             <Icon name="attach-money" size={28} color="#666" />
-                            <Icon name="visibility-off" size={28} color="#666" />
+                            <CardName>NuConta</CardName>
+                            <CardIconRight>
+                                <Icon name="visibility-off" size={28} color="#666" />
+                            </CardIconRight>
                         </CardHeader>
                         <CardContent>
                             <Title>Saldo disponível</Title>
