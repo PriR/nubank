@@ -2,7 +2,7 @@ import React from 'react';
 import {
     Container, Code, 
     Account, AccountItem, Title, Description,
-    Nav, NavItem, NavText, NavIcon,
+    Nav, NavItem, NavItemWithDescription, NavText, NavIcon, NavItemContent, NavTextDescription,
     SignOutButton, SignOutButtonText
 } from './styles';
 
@@ -14,18 +14,18 @@ export default function Menu({ translateY }) {
     return (
         <Container style={{
             opacity: translateY.interpolate({
-                inputRange: [0, 300],
+                inputRange: [0, 520],
                 outputRange: [0, 1]
             })
         }}>
             <Code>
-            <QRCode
-                    value="https://rocketseat.com.br"
-                    size={80}
-                    fgColor="#FFF"
-                    bgColor="#8B10AE"
-                />
-            </Code>
+                <QRCode
+                        value="https://rocketseat.com.br"
+                        size={80}
+                        fgColor="#FFF"
+                        bgColor="#8B10AE"
+                    />
+                </Code>
             <Account>
                 <AccountItem>
                     <Title>Banco</Title>
@@ -56,13 +56,17 @@ export default function Menu({ translateY }) {
                         <Icon name="keyboard-arrow-right" size={20} color="#FFF" />
                     </NavIcon>
                 </NavItem>
-                <NavItem>
+                <NavItemWithDescription>
                     <Icon name="person-outline" size={20} color="#FFF" />
-                    <NavText>Perfil</NavText>
+                    <NavItemContent>
+                        <NavText>Perfil</NavText>
+                        <NavTextDescription>Nome de preferência, telefone, e-mail</NavTextDescription>
+                    </NavItemContent>
+
                     <NavIcon>
                         <Icon name="keyboard-arrow-right" size={20} color="#FFF" />
                     </NavIcon>
-                </NavItem>
+                </NavItemWithDescription>
                 <NavItem>
                     <Icon name="attach-money" size={20} color="#FFF" />
                     <NavText>Configurar NuConta</NavText>

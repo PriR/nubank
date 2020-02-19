@@ -4,7 +4,7 @@ import styled from 'styled-components/native';
 export const Container = styled(Animated.ScrollView).attrs({
     showsVerticalScrollIndicator: false
 })`
-    margin: 0 30px;
+    margin: -60px 30px -80px;
 `;
 
 export const Code = styled.View`
@@ -50,10 +50,31 @@ export const NavItem = styled.View`
     border-bottom-color: rgba(255, 255, 255, 0.3);
 `;
 
+export const NavItemWithDescription = styled.View`
+    flex-direction: row;
+    align-items: center;
+    padding: 5px 0;
+    border-bottom-width: ${StyleSheet.hairlineWidth}px;
+    border-bottom-color: rgba(255, 255, 255, 0.3);
+`;
+
 export const NavText = styled.Text`
     font-size: 15px;
     color: #FFF;
     margin-left: 20px;
+    font-family: Roboto-Light;
+`;
+
+export const NavItemContent = styled.View`
+    flex-direction: column
+`;
+
+export const NavTextDescription = styled.Text`
+    font-size: 11px;
+    color: #FFF;
+    margin-left: 20px;
+    font-family: Roboto-Light;
+    opacity: 0.5;
 `;
 
 export const NavIcon = styled.View`

@@ -22,3 +22,6 @@ export const Title = styled.Text`
     margin-left: 8px;
 `;
 
+export const ContainerIcon = styled.View`
+    opacity: 0.4;
+`;

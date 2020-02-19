@@ -70,8 +70,8 @@ export default function Main() {
                     <Card style={{
                         transform: [{
                             translateY: translateY.interpolate({
-                                inputRange: [0, 480],
-                                outputRange: [0, 480],
+                                inputRange: [0, 520],
+                                outputRange: [0, 520],
                                 extrapolate: 'clamp'
                             })
                         }]
@@ -89,7 +89,7 @@ export default function Main() {
                         </CardContent>
                         <CardFooter>
                             <Annotation>
-                                Transferência de R$ 10.00 recebida de Elis Benedetti hoje às 10:00h
+                                Transferência de R$ 10,00 recebida de Elis Benedetti hoje às 10:00h
                             </Annotation>
                         </CardFooter>
                     </Card>
